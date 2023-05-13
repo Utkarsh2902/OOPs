@@ -20,3 +20,34 @@ int main()
   c1.printCar();
     return 0;
 }
+
+
+
+😎WAP to understand constructor, default constructor
+
+#include <bits/stdc++.h>
+using namespace std;
+class Cars{
+    public:
+    int carNum;
+    string carName;
+    void printCar(){
+        cout<<"car number="<<carNum<<endl;
+        cout<<"car name="<<carName;
+    }
+    Cars(int CarNumber,string CarName){   //constructor
+        carNum=CarNumber;
+        carName=CarName;
+    }
+};
+int main()
+{
+  Cars c1=Cars(1234,"volvo");
+  Cars c2=Cars(5678,"maruti");
+//   c1.carNum=1234;
+//   c1.carName="volvo";
+   c1.printCar();
+   c2.printCar();
+  
+    return 0;
+}
