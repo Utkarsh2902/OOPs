@@ -1,0 +1,22 @@
+😎WAP to understand class,objects and functions
+
+//#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+class cars{
+    public:
+    int carNum;
+    string carName;
+    void printCar(){
+        cout<<"car number="<<carNum<<endl;
+        cout<<"car name="<<carName;
+    }
+};
+int main()
+{
+  cars c1;
+  c1.carNum=1234;
+  c1.carName="volvo";
+  c1.printCar();
+    return 0;
+}
