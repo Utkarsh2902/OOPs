@@ -51,3 +51,53 @@ int main()
   
     return 0;
 }
+
+😎WAP to understand ENCAPSULATION
+
+#include <bits/stdc++.h>
+using namespace std;
+class Car{
+    //encapsulation
+    private:
+    int CarNum;
+    string CarName;
+    public:
+     void setNum(int Number)
+     {
+        CarNum=Number;
+     }
+    int getNum()
+    {
+        return CarNum;
+    }
+    void setName(string Name)
+    {
+        CarName=Name;
+    }
+    string getName()
+    {
+        return CarName;
+    }
+    // void Carinfo()
+    // {
+    //     cout<<"CarNumber is"<<CarNum<<endl;
+    // }
+    
+    //constructor
+    Car(int Number)
+    {
+        CarNum=Number;
+    }
+};
+int main()
+{
+ Car C1=Car(1234);
+//  C1.Carinfo();
+  C1.setNum(23);
+  cout<<C1.getNum();
+  C1.setName("Priyanshi");
+  cout<<C1.getName();
+  
+ 
+    return 0;
+}
