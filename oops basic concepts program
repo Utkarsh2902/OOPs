@@ -236,6 +236,78 @@ int main()
  return 0;
 }
 
+😎WAP to understand Polymorphism ,virtual function and pointer
+#include <bits/stdc++.h>
+using namespace std;
+class Car{
+   private:
+    string CarName;
+     protected:
+     int CarNum;
+    public:
+    void setNum(int Number)
+    {
+        CarNum=Number;
+    }
+    int getNum()
+    {
+        return CarNum;
+    }
+    void setName(string Name)
+    {
+        CarName=Name;
+    }
+    string getName()
+    {
+        return CarName;
+    }
+    void Carinfo()
+    {
+        cout<<"CarNumber is"<<CarNum<<endl;
+        cout<<"CarName is"<<CarName<<endl;
+        
+    }
+    //constructor
+    Car(int Number,string Name)
+    {
+        CarNum=Number;
+        CarName=Name;
+    }
+  virtual void feature()//polymorphism
+    {
+        cout<<CarNum<<"is extreamly featured with many things";
+    }
+};
+class Type:public Car{
+public:
+string typeName;
+//constructor
+Type(string tName,int Number,string Name):Car(Number,Name)//inheritance and inherit constructor
+{
+    typeName=tName;
+}
+  void setType(string tName)
+    {
+        typeName=tName;
+    }
+    string getType()
+    {
+        return typeName;
+    }
+     void feature()
+    {
+        cout<<CarNum<<"is poorly featured";
+    }
+
+};
+int main()
+{
+ Car C1=Car(123,"Yogesh");
+ Type T=Type("",1234,"Volvo");
+ Car *p=&T;       //pointer refreance to drived class object
+ p ->feature();
+ return 0;
+}
 
 
 
