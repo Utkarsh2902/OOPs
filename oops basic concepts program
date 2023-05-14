@@ -101,3 +101,69 @@ int main()
  
     return 0;
 }
+
+😎WAP to understand Abstraction
+
+#include <bits/stdc++.h>
+using namespace std;
+//abstract class
+class Abstractcar{
+   virtual void loanApprove()=0;
+};
+//agreement
+class Car: Abstractcar{
+    //encapsulation
+    private:
+    int CarNum;
+    string CarName;
+    public:
+     void setNum(int Number)
+     {
+        CarNum=Number;
+     }
+    int getNum()
+    {
+        return CarNum;
+    }
+    void setName(string Name)
+    {
+        CarName=Name;
+    }
+    string getName()
+    {
+        return CarName;
+    }
+    // void Carinfo()
+    // {
+    //     cout<<"CarNumber is"<<CarNum<<endl;
+    // }
+    
+    //constructor
+    Car(int Number)
+    {
+        CarNum=Number;
+    }
+    void loanApprove()
+    {
+        if(CarNum>20)
+        {
+            cout<<"approved"<<endl;
+        }
+        else
+        {
+            cout<<"not approved"<<endl;
+        }
+    }
+};
+int main()
+{
+ Car C1=Car(1234);
+//  C1.Carinfo();
+  C1.setNum(2);
+  cout<<C1.getNum();
+  C1.setName("Priyanshi\n");
+  cout<<C1.getName();
+  C1.loanApprove();
+ 
+    return 0;
+}
