@@ -1,0 +1,27 @@
+🤩WAP of basic understanding of pointers
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int x=4;
+   int *p=&x;//* means value at and assigning address of x 
+   *p=*p+1;//value of x is now increamented by pointer
+   cout<<*p;
+   cout<<x;
+
+    return 0;
+}
+
+🤩WAP of basic understanding of pointers in arrays
+#include <iostream>
+using namespace std;
+int main()
+{
+  int a[3]={1,1,1};
+  cout<<&a<<endl;  //a itself is a pointer
+  cout<<*a;
+  return 0;
+}
